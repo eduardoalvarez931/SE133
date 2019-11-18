@@ -7,6 +7,41 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+     <script>
+        window.onload = function () {
+        
+            var chart = new CanvasJS.Chart("chartContainer", {
+                animationEnabled: true,
+                theme: "light2",
+                title:{
+                    text: "Simple Line Chart"
+                },
+                axisY:{
+                    includeZero: false
+                },
+                data: [{        
+                    type: "line",       
+                    dataPoints: [
+                        { y: 450 },
+                        { y: 414},
+                        { y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+                        { y: 460 },
+                        { y: 450 },
+                        { y: 500 },
+                        { y: 480 },
+                        { y: 480 },
+                        { y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+                        { y: 500 },
+                        { y: 480 },
+                        { y: 510 }
+                    ]
+                }]
+            });
+        chart.render();
+        
+        }
+        </script>
 </head>
 
 <body>
@@ -16,29 +51,32 @@
 			<span class="navbar-toggler-icon"></span>
         </button>
         
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mx-auto"> 
-            <li class="nav-item"> 
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item"> 
-                <a class="nav-link" href="mealEditor.html">Meal Editor</a> 
-            </li>
-            <li class="nav-item"> 
-                <a class="nav-link" href="calander.html"> Calendar</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="graphs.html"> Graphs</a>
-            </li>
-        </ul>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto"> 
+                <li class="nav-item"> 
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="mealEditor.html">Meal Editor</a> 
+                </li>
+                <li class="nav-item"> 
+                    <a class="nav-link" href="calander.html"> Calendar</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="graphs.html"> Graphs</a>
+                </li>
+            </ul>
 
-        <form class="form-inline">
-			<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			<button class="btn btn-light my-sm-0" type="submit">Search</button>
-		</form>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-light my-sm-0" type="submit">Search</button>
+            </form>
 
-    </div>
+        </div>
+    </nav>
 
+    <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
     <h1>  </h1>
 
