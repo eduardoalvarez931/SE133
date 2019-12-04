@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+.Home {
+  text-align: center;
+}
 nav{
   display: flex;
   justify-content: space-around;

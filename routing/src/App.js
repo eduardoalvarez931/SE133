@@ -31,8 +31,9 @@ function App() {
 
 //home component
 const Home = () => (
-  <div>
+  <div className="Home">
     <h1> Home Page </h1>
+    <body>hi</body>
   </div>
 )
 
