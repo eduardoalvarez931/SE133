@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import About from './About';
 import Shop from './Shop';
+import Calendar from './Calendar';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -11,7 +12,6 @@ function App() {
     //put all your components in here
     <Router>
       <div className="App">
-        <h1> wassap </h1>
         <Nav/>
         <Switch>
            {/*hits only one of these pages, not all with a switch from top to botom*/}
@@ -19,6 +19,7 @@ function App() {
           <Route  path="/" exact component ={Home} />
           <Route path="/about" component ={About} />
           <Route path="/shop" component ={Shop} />
+          <Route path="/calendar" component ={Calendar} />
         </Switch>
         
 
