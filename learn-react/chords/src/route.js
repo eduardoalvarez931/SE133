@@ -8,7 +8,6 @@ const routing = (
     {/* <Route path="/" exact component={App} /> */}
     
       <Route exact path="/" component={NewPage} />
-    
     </div>
   </Router>
 )
